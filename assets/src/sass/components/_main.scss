@@ -1,0 +1,28 @@
+/**
+ * Main
+ * =================================
+ * Main should just be a few specific edits tailwind couldn't handle / anything that didn't need a full partial.
+ *
+ *
+ */
+
+.ruda {
+  font-family: "Ruda", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto Slab", serif;
+}
+
+/* stylelint-disable selector-max-id */
+#particles-js {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+/* stylelint-enable selector-max-id */
+
+.purple-bg {
+  background-color: #bb86fc;
+}

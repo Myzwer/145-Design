@@ -1,0 +1,77 @@
+/**
+ * Positioning
+ * =================================
+ * This site uses a lot of really specific positioning to handle the images and non-linear sections,
+ * This file aims to keep those organized since tailwind doesn't have the classes to support it.
+ *
+ */
+
+.header {
+  color: #ffffff;
+  height: 60vh;
+  position: relative;
+
+  img {
+    left: -50px;
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 3em;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .middle {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .header {
+    height: 80vh;
+
+    img {
+      left: -100px;
+      top: -200px;
+      width: 60%;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    .middle {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .header {
+    img {
+      left: -100px;
+      max-width: 800px;
+      top: -200px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 4em;
+      line-height: 65px;
+    }
+  }
+}
