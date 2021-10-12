@@ -23,6 +23,12 @@
 }
 /* stylelint-enable selector-max-id */
 
-.purple-bg {
-  background-color: #bb86fc;
+.massive {
+  font-size: 11em;
+}
+
+@media screen and (min-width: 64em) {
+  .massive {
+    font-size: 15em;
+  }
 }

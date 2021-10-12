@@ -35,6 +35,29 @@ get_header(); ?>
 </div>
 
 <img src="http://145-design.local/wp-content/uploads/2021/08/Services-Top-Compressed.png" alt="">
-<div class="purple-bg">
-    <h1 class="text-center text-white opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Services</h1>
+<div class="bg-purple text-white">
+    <h1 class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Services</h1>
+    <div class="m-4 md:my-10 max-w-7xl text-center mx-auto">
+        <div class="grid grid-cols-12 lg:-mt-14">
+            <div class="col-span-12 md:col-span-4 p-5 text-center">
+                <h2 class = "massive opacity-20">UX</h2>
+                <h3 class = "text-2xl roboto uppercase -mt-40 lg:-mt-52">User Experience</h3>
+                <p class = " mt-20">“User Experience is a lot like a joke. If you have to explain it, it’s not that good.”</p>
+            </div>
+
+            <div class="col-span-12 md:col-span-4 p-5 text-center">
+                <h2 class = "massive opacity-20">UI</h2>
+                <h3 class = "text-2xl roboto uppercase -mt-40 lg:-mt-52">User Interface</h3>
+                <p class = " mt-20">“Everything is designed. Far less is designed well.”</p>
+            </div>
+
+
+            <div class="col-span-12 md:col-span-4 p-5 text-center">
+                <h2 class = "massive opacity-20">WD</h2>
+                <h3 class = "text-2xl roboto uppercase -mt-40 lg:-mt-52">Web Development</h3>
+                <p class = " mt-20">“My code better start doing what I want it to do instead of what I’m telling it to do.”</p>
+            </div>
+        </div>
+    </div>
 </div>
+
