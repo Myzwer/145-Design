@@ -12,13 +12,16 @@
  */
 
 get_header(); ?>
-<div id="particles-js"></div>
+<div id="particles-js" id = "top"></div>
 <div class="header">
     <img src="http://145-design.local/wp-content/uploads/2021/08/Header-blob.png" alt="">
     <div class="middle">
         <h1>Hey!</h1>
         <h1>I'm Josh.</h1>
         <h2>I make awesome sites for awesome people.</h2>
+        <div class="mt-10 text-center">
+            <a class="bg-blue py-3 px-12 rounded-full text-black transition-colors duration-500" href="#contact">Contact Me</a>
+        </div>
     </div>
 </div>
 
@@ -100,7 +103,7 @@ get_header(); ?>
 
 <img src="http://145-design.local/wp-content/uploads/2021/08/Services-Top-Compressed.png" alt="">
 <div class="bg-purple text-white">
-    <h1 class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Contact</h1>
+    <h1 id = "contact" class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Contact</h1>
     <div class="m-4 md:my-10 max-w-7xl text-center mx-auto">
         <div class="grid grid-cols-12 lg:-mt-14">
             <?php if (have_posts()) : while (have_posts()) : the_post();
@@ -117,7 +120,7 @@ get_header(); ?>
     <p>Oh hey.</p>
         <p>You made it to the footer.</p>
         <p>Thanks for that. ❤️</p>
-    <a href="#">^ Back to top ^</a>
+    <a href="#top">^ Back to top ^</a>
 </div>
 
 

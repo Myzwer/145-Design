@@ -36,10 +36,7 @@ module.exports = {
        * https://tailwindcss.com/docs/customizing-colors#custom-colors
        * */
       blue: {
-        light: "#6495ED", // text-blue-light
-        DEFAULT: "#0047AB", // text-blue
-        dark: "#00008B", // text-blue-dark
-        100: "#ff0000", // text-blue-100
+        DEFAULT: "#03CAD5", // text-blue
       },
       purple: {
         DEFAULT: "#BB86FC",
