@@ -36,7 +36,7 @@ get_header(); ?>
 
 <img src="http://145-design.local/wp-content/uploads/2021/08/Services-Top-Compressed.png" alt="">
 <div class="bg-purple text-white">
-    <h1 class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Services</h1>
+    <h1 class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Skills</h1>
     <div class="m-4 md:my-10 max-w-7xl text-center mx-auto">
         <div class="grid grid-cols-12 lg:-mt-14">
             <div class="col-span-12 md:col-span-4 p-5 text-center">
@@ -59,5 +59,65 @@ get_header(); ?>
             </div>
         </div>
     </div>
+    <img src="http://145-design.local/wp-content/uploads/2021/10/Projects-Top.png" alt="" class = "w-full">
 </div>
+
+<div class="bg-black-background text-white">
+    <h1 class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase mb-20">Projects</h1>
+    <div class="m-4 md:my-10 max-w-7xl text-center mx-auto">
+        <div class="grid grid-cols-12 mb-20">
+            <div class="col-span-12 md:col-span-5 p-5 text-center">
+                <img class = "drop-shadow-2xl" src="http://145-design.local/wp-content/uploads/2021/10/Busy-Pastor-Site.jpg" alt="">
+            </div>
+            <div class="col-span-12 md:col-span-7 p-5 text-left">
+                <h3><span class = "text-purple">Site:</span> The Busy Pastor</h3>
+                <h4><span class = "text-purple">URL:</span>  <a href="busypastor.org">busypastor.org</a></h4>
+                <h4><span class = "text-purple">Role:</span>  Designer and Developer</h4>
+                <h4><span class = "text-purple">Details:</span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consectetur consequuntur dicta doloremque esse eum fugiat illum impedit, libero nemo nihil nisi quibusdam repellendus sed sint tempora veritatis voluptate, voluptates.</h4>
+                <h4><span class = "text-purple">Stack:</span> Wordpress</h4>
+                <div class="mt-10">
+                <a class="bg-purple py-3 px-12 rounded-full text-white transition-colors duration-500" href="#">View Live</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-12 mb-20">
+            <div class="col-span-12 md:col-span-5 p-5 text-center">
+                <img class = "drop-shadow-2xl" src="http://145-design.local/wp-content/uploads/2021/10/Busy-Pastor-Site.jpg" alt="">
+            </div>
+            <div class="col-span-12 md:col-span-7 p-5 text-left">
+                <h3><span class = "text-purple">Site:</span> The Busy Pastor</h3>
+                <h4><span class = "text-purple">URL:</span>  <a href="busypastor.org">busypastor.org</a></h4>
+                <h4><span class = "text-purple">Role:</span>  Designer and Developer</h4>
+                <h4><span class = "text-purple">Details:</span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consectetur consequuntur dicta doloremque esse eum fugiat illum impedit, libero nemo nihil nisi quibusdam repellendus sed sint tempora veritatis voluptate, voluptates.</h4>
+                <h4><span class = "text-purple">Stack:</span> Wordpress</h4>
+                <div class="mt-10">
+                    <a class="bg-purple py-3 px-12 rounded-full text-white transition-colors duration-500" href="#">View Live</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<img src="http://145-design.local/wp-content/uploads/2021/08/Services-Top-Compressed.png" alt="">
+<div class="bg-purple text-white">
+    <h1 class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Contact</h1>
+    <div class="m-4 md:my-10 max-w-7xl text-center mx-auto">
+        <div class="grid grid-cols-12 lg:-mt-14">
+            <?php if (have_posts()) : while (have_posts()) : the_post();
+                the_content();
+            endwhile;
+            else: ?>
+                <p>Sorry, no posts matched your criteria.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<div class="text-center text-white py-10">
+    <p>Oh hey.</p>
+        <p>You made it to the footer.</p>
+        <p>Thanks for that. ❤️</p>
+    <a href="#">^ Back to top ^</a>
+</div>
+
 
