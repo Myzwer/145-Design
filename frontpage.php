@@ -131,12 +131,12 @@ get_header(); ?>
                         <h4><span class="text-purple">Stack:</span> <?php the_sub_field('stack'); ?></h4>
                         <?php if (get_sub_field('live_link')): ?>
                             <a class="bg-purple py-3 px-12 rounded-full text-white transition-colors duration-500"
-                               href="<?php the_sub_field('live_link'); ?>">View
+                               href="<?php the_sub_field('live_link'); ?>" target="_blank">View
                                 Live</a>
                         <?php endif; ?>
                         <?php if (get_sub_field('github_link')): ?>
                             <a class="inline-block mt-4 border border-purple py-3 px-12 rounded-full text-white transition-colors duration-500"
-                               href="<?php the_sub_field('github_link'); ?>"><i class="fab fa-github"></i> View
+                               href="<?php the_sub_field('github_link'); ?>" target="_blank"><i class="fab fa-github"></i> View
                                 on Github</a>
                         <?php endif; ?>
                     </div>
