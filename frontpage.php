@@ -113,27 +113,61 @@ get_header(); ?>
 
         <?php
         if (have_rows('project')):
-            while (have_rows('project')) : the_row(); ?>
+            while (have_rows('project')) :
+                the_row(); ?>
 
                 <div class="grid grid-cols-12 mb-20">
                     <div class="col-span-12 md:col-span-5 p-5 text-center">
                         <div class="container">
+
+                            <!-- Start of the thumbnail-->
                             <div class="featured-img">
-                                <img class="drop-shadow-2xl rounded-md"
-                                     src="<?php the_sub_field('site_image'); ?>"
-                                     alt="<?php the_sub_field('site_title'); ?> Site Photo">
+
+                                <!-- Check to see IF link exists and link it if it does, hide <a> if it doesn't. -->
+                                <?php if (get_sub_field('live_link')): ?>
+
+                                <!-- If link exists, wrap image in it. -->
+                                <a href="<?php the_sub_field('live_link'); ?>" target="_blank">
+                                    <?php endif; ?>
+
+                                    <!-- The Actual image + Alt tag.-->
+                                    <img class="drop-shadow-2xl rounded-md"
+                                         src="<?php the_sub_field('site_image'); ?>"
+                                         alt="<?php the_sub_field('site_title'); ?> Site Photo">
+
+                                    <!-- Add closing </a> if field has content, hide if it doesn't. -->
+                                    <?php if (get_sub_field('live_link')): ?> </a> <?php endif; ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-span-12 md:col-span-7 p-5 text-left">
+
+                        <!-- Get the site title -->
                         <h3><span class="text-purple">Site:</span> <?php the_sub_field('site_title'); ?></h3>
-                        <h4><span class="text-purple">URL:</span> <a
-                                    href="<?php the_sub_field('live_link'); ?>"><?php the_sub_field('live_link'); ?></a>
-                        </h4>
-                        <h4><span class="text-purple">Active:</span> <?php the_sub_field('active'); ?></h4>
+
+                        <!-- Check to see if URL exists and display it if it does -->
+                        <?php if (get_sub_field('live_link')): ?>
+                            <h4>
+                                <span class="text-purple">URL:</span>
+                                <a href="<?php the_sub_field('live_link'); ?>"
+                                   target="_blank"><?php the_sub_field('live_link'); ?>
+                                </a>
+                            </h4>
+                        <?php endif; ?>
+
+                        <!-- Get Is site active -->
+                        <h4><span class="text-purple">Currently Active:</span> <?php the_sub_field('active'); ?></h4>
+
+                        <!-- Get my Role -->
                         <h4><span class="text-purple">Role:</span> <?php the_sub_field('role'); ?></h4>
+
+                        <!-- Get Details paragraph -->
                         <h4><span class="text-purple">Details:</span> <?php the_sub_field('details'); ?></h4>
+
+                        <!-- Get stack -->
                         <h4><span class="text-purple">Stack:</span> <?php the_sub_field('stack'); ?></h4>
+
+                        <!-- If Buttons exists, show live site + Github link -->
                         <?php if (get_sub_field('live_link')): ?>
                             <a class="bg-purple py-3 px-12 rounded-full text-white transition-colors duration-500"
                                href="<?php the_sub_field('live_link'); ?>" target="_blank">View
@@ -160,12 +194,12 @@ get_header(); ?>
     <div class="m-4 md:my-10 max-w-7xl mx-auto">
         <div class="grid grid-cols-12 lg:-mt-14">
             <div class="col-span-12 md:col-span-8 mt-5 p-5">
-            <?php if (have_posts()) : while (have_posts()) : the_post();
-                the_content();
-            endwhile;
-            else: ?>
-                <p>Sorry, no posts matched your criteria.</p>
-            <?php endif; ?>
+                <?php if (have_posts()) : while (have_posts()) : the_post();
+                    the_content();
+                endwhile;
+                else: ?>
+                    <p>Sorry, no posts matched your criteria.</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
