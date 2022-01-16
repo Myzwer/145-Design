@@ -1,0 +1,40 @@
+/**
+ * Form
+ * =================================
+ * This is gonna blow your mind, but this covers the forms. Gravity forms has some
+ * specific classes that this changes the style of.
+ *
+ *
+ */
+
+/* stylelint-disable selector-max-id, selector-max-compound-selectors, selector-class-pattern */
+.gform_body input {
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: #000000;
+}
+
+.gform_body textarea {
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  color: #000000;
+}
+
+.gform_title {
+  display: none;
+}
+
+.gform_body .gform_button button {
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+
+.gform_button {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #000000;
+  padding: 5px 30px;
+}
+
+/* stylelint-enable selector-max-id, selector-max-compound-selectors, selector-class-pattern */

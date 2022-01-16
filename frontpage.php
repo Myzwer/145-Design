@@ -157,14 +157,16 @@ get_header(); ?>
 <img src="http://145-design.local/wp-content/uploads/2021/08/Services-Top-Compressed.png" alt="">
 <div class="bg-purple text-white">
     <h1 id="contact" class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Contact</h1>
-    <div class="m-4 md:my-10 max-w-7xl text-center mx-auto">
+    <div class="m-4 md:my-10 max-w-7xl mx-auto">
         <div class="grid grid-cols-12 lg:-mt-14">
+            <div class="col-span-12 md:col-span-8 mt-5 p-5">
             <?php if (have_posts()) : while (have_posts()) : the_post();
                 the_content();
             endwhile;
             else: ?>
                 <p>Sorry, no posts matched your criteria.</p>
             <?php endif; ?>
+            </div>
         </div>
     </div>
 </div>
