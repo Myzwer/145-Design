@@ -122,43 +122,29 @@ get_header(); ?>
                     </div>
                     <div class="col-span-12 md:col-span-7 p-5 text-left">
                         <h3><span class="text-purple">Site:</span> <?php the_sub_field('site_title'); ?></h3>
-                        <h4><span class="text-purple">URL:</span> <a href="<?php the_sub_field('link'); ?>"><?php the_sub_field('link'); ?></a></h4>
+                        <h4><span class="text-purple">URL:</span> <a
+                                    href="<?php the_sub_field('live_link'); ?>"><?php the_sub_field('live_link'); ?></a>
+                        </h4>
+                        <h4><span class="text-purple">Active:</span> <?php the_sub_field('active'); ?></h4>
                         <h4><span class="text-purple">Role:</span> <?php the_sub_field('role'); ?></h4>
-                        <h4><span class="text-purple">Details:</span>
-                            <?php the_sub_field('details'); ?></h4>
+                        <h4><span class="text-purple">Details:</span> <?php the_sub_field('details'); ?></h4>
                         <h4><span class="text-purple">Stack:</span> <?php the_sub_field('stack'); ?></h4>
-                        <div class="mt-10">
+                        <?php if (get_sub_field('live_link')): ?>
                             <a class="bg-purple py-3 px-12 rounded-full text-white transition-colors duration-500"
-                               href="<?php the_sub_field('link'); ?>">View
+                               href="<?php the_sub_field('live_link'); ?>">View
                                 Live</a>
-                        </div>
+                        <?php endif; ?>
+                        <?php if (get_sub_field('github_link')): ?>
+                            <a class="inline-block mt-4 border border-purple py-3 px-12 rounded-full text-white transition-colors duration-500"
+                               href="<?php the_sub_field('github_link'); ?>"><i class="fab fa-github"></i> View
+                                on Github</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php
             endwhile;
         else :
         endif; ?>
-
-
-        <div class="grid grid-cols-12 mb-20">
-            <div class="col-span-12 md:col-span-5 p-5 text-center">
-                <img class="drop-shadow-2xl"
-                     src="http://145-design.local/wp-content/uploads/2021/10/Busy-Pastor-Site.jpg" alt="">
-            </div>
-            <div class="col-span-12 md:col-span-7 p-5 text-left">
-                <h3><span class="text-purple">Site:</span> The Busy Pastor</h3>
-                <h4><span class="text-purple">URL:</span> <a href="busypastor.org">busypastor.org</a></h4>
-                <h4><span class="text-purple">Role:</span> Designer and Developer</h4>
-                <h4><span class="text-purple">Details:</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Atque consectetur consequuntur dicta doloremque esse eum fugiat illum impedit, libero nemo nihil
-                    nisi quibusdam repellendus sed sint tempora veritatis voluptate, voluptates.</h4>
-                <h4><span class="text-purple">Stack:</span> Wordpress</h4>
-                <div class="mt-10">
-                    <a class="bg-purple py-3 px-12 rounded-full text-white transition-colors duration-500" href="#">View
-                        Live</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
