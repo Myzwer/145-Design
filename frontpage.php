@@ -117,8 +117,13 @@ get_header(); ?>
 
                 <div class="grid grid-cols-12 mb-20">
                     <div class="col-span-12 md:col-span-5 p-5 text-center">
-                        <img class="drop-shadow-2xl"
-                             src="<?php the_sub_field('site_image'); ?>" alt="">
+                        <div class="container">
+                            <div class="featured-img">
+                                <img class="drop-shadow-2xl rounded-md"
+                                     src="<?php the_sub_field('site_image'); ?>"
+                                     alt="<?php the_sub_field('site_title'); ?> Site Photo">
+                            </div>
+                        </div>
                     </div>
                     <div class="col-span-12 md:col-span-7 p-5 text-left">
                         <h3><span class="text-purple">Site:</span> <?php the_sub_field('site_title'); ?></h3>
@@ -136,7 +141,8 @@ get_header(); ?>
                         <?php endif; ?>
                         <?php if (get_sub_field('github_link')): ?>
                             <a class="inline-block mt-4 border border-purple py-3 px-12 rounded-full text-white transition-colors duration-500"
-                               href="<?php the_sub_field('github_link'); ?>" target="_blank"><i class="fab fa-github"></i> View
+                               href="<?php the_sub_field('github_link'); ?>" target="_blank"><i
+                                        class="fab fa-github"></i> View
                                 on Github</a>
                         <?php endif; ?>
                     </div>
