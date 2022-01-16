@@ -64,3 +64,8 @@
     rgba(196, 147, 255, 1) 100%
   );
 }
+
+// Smooth Scrolling for the various inline links on the page.
+html {
+  scroll-behavior: smooth;
+}
