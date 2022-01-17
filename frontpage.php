@@ -37,7 +37,7 @@ get_header(); ?>
     </div>
 </div>
 
-<img src="<?php the_field('skill_top_image'); ?>" alt="">
+<img src="<?php the_field('skill_top_image'); ?>" alt="Top Squiggle (it's a word)">
 <div class="bg-purple text-white">
     <h1 class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase"><?php the_field('section_title_2'); ?></h1>
     <div class="m-4 md:my-10 max-w-7xl text-center mx-auto">
@@ -103,7 +103,7 @@ get_header(); ?>
 
         </div>
     </div>
-    <img src="http://145-design.local/wp-content/uploads/2021/10/Projects-Top.png" alt="" class="w-full">
+    <img src="<?php the_field('projects_top_squiggle'); ?>" alt="Top Squiggle (it's a word)" class="w-full">
 </div>
 
 <div class="bg-black-background text-white">
@@ -188,12 +188,12 @@ get_header(); ?>
     </div>
 </div>
 
-<img src="http://145-design.local/wp-content/uploads/2021/08/Services-Top-Compressed.png" alt="">
+<img src="<?php the_field('skill_top_image'); ?>" alt="Top Squiggle (it's a word)">
 <div class="bg-purple text-white">
     <h1 id="contact" class="text-center opacity-60 text-6xl lg:text-8xl pt-5 uppercase">Contact</h1>
     <div class="m-4 md:my-10 max-w-7xl mx-auto">
         <div class="grid grid-cols-12 lg:-mt-14">
-            <div class="col-span-12 md:col-span-8 mt-5 p-5">
+            <div class="col-span-12 md:col-span-8 md:col-start-3 mt-5 p-5">
                 <?php if (have_posts()) : while (have_posts()) : the_post();
                     the_content();
                 endwhile;
