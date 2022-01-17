@@ -32,7 +32,7 @@ get_header(); ?>
 </div>
 
 <div class=" p-5 sm:w-1/2 text-center mx-auto relative">
-    <div class="text-white py-2 text-left">
+    <div class="text-white py-2 text-left bio">
         <?php the_field('bio'); ?>
     </div>
 </div>
