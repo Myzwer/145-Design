@@ -12,8 +12,8 @@
  */
 
 get_header(); ?>
-<div id="particles-js" id="top"></div>
-<div class="header">
+<div id="particles-js"></div>
+<div class="header" id="top">
     <img src="<?php the_field('background_blob'); ?>" alt="">
     <div class="middle">
         <h1><?php the_field('title_1'); ?></h1>
